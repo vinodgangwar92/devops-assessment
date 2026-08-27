@@ -12,3 +12,10 @@ variable "availability_zones" {
   type    = list(string)
   default = ["ap-south-1a", "ap-south-1b"]
 }
+
+variable "db_password" {
+  description = "RDS database password"
+  type        = string
+  sensitive   = true
+  default     = "assessment-password"
+}

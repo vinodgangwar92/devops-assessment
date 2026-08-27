@@ -145,11 +145,11 @@ resource "aws_ecs_task_definition" "app" {
       environment = [
         {
           name  = "DB_HOST"
-          value = "dev-postgres.cn0koc6weg0c.ap-south-1.rds.amazonaws.com"
+          value = var.db_host
         },
         {
           name  = "DB_PORT"
-          value = "5432"
+          value = tostring(var.db_port)
         },
         {
           name  = "DB_NAME"
