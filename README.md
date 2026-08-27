@@ -42,3 +42,13 @@ Internet → Application Load Balancer → ECS/Fargate → Private RDS PostgreSQ
 │   └── restore.sh
 ├── docker-compose.yml
 └── README.md
+## Terraform Validation
+
+Run the following commands:
+
+```bash
+cd infra/envs/dev
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -refresh=false
