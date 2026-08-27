@@ -35,6 +35,7 @@ module "rds" {
   source = "../../modules/rds"
 
   environment             = "dev"
+  db_password             = var.db_password
   vpc_id                  = module.network.vpc_id
   private_db_subnet_ids   = module.network.private_db_subnet_ids
   ecs_security_group_id   = module.ecs.ecs_security_group_id

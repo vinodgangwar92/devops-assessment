@@ -43,7 +43,7 @@ resource "aws_db_instance" "main" {
 
   db_name  = "hotel_booking"
   username = "postgres"
-  password = "assessment-password"
+  password = var.db_password
 
   port = 5432
 

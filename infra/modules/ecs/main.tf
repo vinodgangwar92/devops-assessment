@@ -161,7 +161,7 @@ resource "aws_ecs_task_definition" "app" {
         },
         {
           name  = "DB_PASSWORD"
-          value = "assessment-password"
+          value = var.db_password
         }
       ]
     }

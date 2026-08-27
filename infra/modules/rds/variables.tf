@@ -26,3 +26,9 @@ variable "deletion_protection" {
   type = bool
 }
 
+
+variable "db_password" {
+  description = "RDS database password"
+  type        = string
+  sensitive   = true
+}
