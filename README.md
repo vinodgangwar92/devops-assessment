@@ -10,7 +10,13 @@ Internet → Application Load Balancer → ECS/Fargate → Private RDS PostgreSQ
 
 ### AWS Components
 
+```
+
+### Production
+
+```bash
 - VPC
+```
 - Public and private subnets
 - Application Load Balancer
 - ECS Fargate cluster and service
@@ -42,9 +48,10 @@ Internet → Application Load Balancer → ECS/Fargate → Private RDS PostgreSQ
 │   └── restore.sh
 ├── docker-compose.yml
 └── README.md
+
 ## Terraform Validation
 
-Run the following commands:
+### Dev
 
 ```bash
 cd infra/envs/dev
@@ -52,3 +59,14 @@ terraform init
 terraform fmt -recursive
 terraform validate
 terraform plan -refresh=false
+```
+
+### Production
+
+```bash
+cd infra/envs/prod
+terraform init
+terraform fmt -recursive
+terraform validate
+terraform plan -refresh=false
+```
